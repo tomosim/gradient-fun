@@ -1,25 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { Router, Link } from "@reach/router";
+import StyledLink from "./Components/Styled/StyledLink";
+import "./App.css";
+import Background from "./Components/Styled/Background";
+import TransparentWrapper from "./Components/Styled/TransparentWrapper";
+import SettingsPage from "./Pages/SettingsPage";
+import Nav from "./Components/Nav";
 
 function App() {
+  const [colourOne, setColourOne] = useState([255, 130, 180]);
+  const [colourTwo, setColourTwo] = useState([0, 210, 255]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Background colourOne={colourOne} colourTwo={colourTwo}>
+      <TransparentWrapper>
+        <h1>Tom Simmons.</h1>
+        <Nav />
+        <Router>
+          <SettingsPage
+            colourOne={colourOne}
+            colourTwo={colourTwo}
+            setColourOne={setColourOne}
+            setColourTwo={setColourTwo}
+            path="/settings"
+          />
+        </Router>
+      </TransparentWrapper>
+    </Background>
   );
 }
 
