@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { Router, Link } from "@reach/router";
-import StyledLink from "./Components/Styled/StyledLink";
+import { Router } from "@reach/router";
 import "./App.css";
 import Background from "./Components/Styled/Background";
 import TransparentWrapper from "./Components/Styled/TransparentWrapper";
