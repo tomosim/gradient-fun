@@ -5,6 +5,7 @@ import Background from "./Components/Styled/Background";
 import TransparentWrapper from "./Components/Styled/TransparentWrapper";
 import SettingsPage from "./Pages/SettingsPage";
 import Nav from "./Components/Nav";
+import AboutPage from "./Pages/AboutPage";
 
 function App() {
   const [colourOne, setColourOne] = useState([255, 130, 180]);
@@ -20,6 +21,7 @@ function App() {
         <h1>Tom Simmons.</h1>
         <Nav nightMode={nightMode} />
         <Router>
+          <AboutPage path="/" nightMode={nightMode} />
           <SettingsPage
             colourOne={colourOne}
             colourTwo={colourTwo}

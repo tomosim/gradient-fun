@@ -1,7 +1,8 @@
 import React from "react";
 import SliderWrapper from "../Components/SliderWrapper";
-import SettingsWrapper from "../Components/Styled/SettingsWrapper";
+import PageWrapper from "../Components/Styled/PageWrapper";
 import Toggle from "react-styled-toggle";
+import Paragraph from "../Components/Styled/Paragraph";
 
 const SettingsPage = ({
   nightMode,
@@ -12,7 +13,7 @@ const SettingsPage = ({
   setNightMode
 }) => {
   return (
-    <SettingsWrapper nightMode={nightMode}>
+    <PageWrapper nightMode={nightMode}>
       <Toggle
         checked={nightMode ? false : true}
         labelLeft="Night Mode"
@@ -39,12 +40,12 @@ const SettingsPage = ({
         colour={colourTwo}
         nightMode={nightMode}
       />
-      <p>
+      <Paragraph>
         <i>
           Psst! I wouldn't recommend {nightMode ? "zeroing" : "maxing"} out...
         </i>
-      </p>
-    </SettingsWrapper>
+      </Paragraph>
+    </PageWrapper>
   );
 };
 

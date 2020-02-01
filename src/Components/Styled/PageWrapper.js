@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const SettingsWrapper = styled.div`
+const PageWrapper = styled.div`
   border-bottom: 2px ${props => (props.nightMode ? "white" : "black")} solid;
   border-top: 2px ${props => (props.nightMode ? "white" : "black")} solid;
   display: flex;
@@ -18,4 +18,4 @@ const SettingsWrapper = styled.div`
   }
 `;
 
-export default SettingsWrapper;
+export default PageWrapper;
