@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const Background = styled.div`
   min-height: 100vh;
-  background-color: black;
+  background-color: ${props => (props.nightMode ? "black" : "white")};
   background-image: linear-gradient(
     ${props =>
       `rgb(${props.colourOne[0]},${props.colourOne[1]},${props.colourOne[2]})`},

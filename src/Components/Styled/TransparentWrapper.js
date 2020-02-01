@@ -5,13 +5,14 @@ const TransparentWrapper = styled.h2`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: black;
-  color: white;
-  height: calc(100vh - 80px);
-  width: calc(100vw - 80px);
+  background-color: ${props => (props.nightMode ? "black" : "white")};
+  color: ${props => (props.nightMode ? "white" : "black")};
+  height: calc(100vh - 60px);
+  width: calc(100vw - 60px);
   padding: 15px;
   margin: 0;
-  mix-blend-mode: multiply;
+  mix-blend-mode: ${props => (props.nightMode ? "multiply" : "screen")};
+
   h1 {
     font-size: 68pt;
   }

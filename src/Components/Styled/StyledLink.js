@@ -3,7 +3,7 @@ import { Link } from "@reach/router";
 
 const StyledLink = styled(Link)`
   text-decoration: none;
-  color: white;
+  color: ${props => (props.nightMode ? "white" : "black")};
   &:hover {
     text-decoration: underline;
   }

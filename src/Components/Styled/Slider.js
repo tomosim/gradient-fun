@@ -5,7 +5,7 @@ const Slider = styled.input`
   appearance: none;
   height: 5px; /* Specified height */
   margin: 8px 0;
-  background: white;
+  background: ${props => (props.nightMode ? "white" : "black")};
   outline: none; /* Remove outline */
   &::-webkit-slider-thumb {
     -webkit-appearance: none;
