@@ -14,6 +14,7 @@ const SettingsPage = ({
   return (
     <SettingsWrapper nightMode={nightMode}>
       <Toggle
+        checked={nightMode ? false : true}
         labelLeft="Night Mode"
         labelRight="Day Mode"
         height="28"
