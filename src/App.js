@@ -6,6 +6,7 @@ import TransparentWrapper from "./Components/Styled/TransparentWrapper";
 import SettingsPage from "./Pages/SettingsPage";
 import Nav from "./Components/Nav";
 import AboutPage from "./Pages/AboutPage";
+import Header from "./Components/Styled/Header";
 
 function App() {
   const [colourOne, setColourOne] = useState([255, 130, 180]);
@@ -18,7 +19,7 @@ function App() {
       nightMode={nightMode}
     >
       <TransparentWrapper nightMode={nightMode}>
-        <h1>Tom Simmons.</h1>
+        <Header>Welcome</Header>
         <Nav nightMode={nightMode} />
         <Router>
           <AboutPage path="/" nightMode={nightMode} />

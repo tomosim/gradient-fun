@@ -12,10 +12,6 @@ const TransparentWrapper = styled.h2`
   padding: 15px;
   margin: 0;
   mix-blend-mode: ${props => (props.nightMode ? "multiply" : "screen")};
-
-  h1 {
-    font-size: 68pt;
-  }
   display: flex;
   flex-direction: column;
 `;
